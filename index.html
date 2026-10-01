@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Affan Kirana Store | अफ्फान किराना स्टोर</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f6f7f3;
+    color:#172019;
+}
+a{text-decoration:none}
+button,input,textarea{font:inherit}
+
+/* HEADER */
+.header{
+    background:#103d24;
+    color:white;
+}
+.top{
+    max-width:1200px;
+    margin:auto;
+    padding:10px 20px;
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    font-size:14px;
+}
+.nav{
+    background:white;
+    color:#123d25;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 3px 15px #0001;
+}
+.nav-inner{
+    max-width:1200px;
+    margin:auto;
+    min-height:75px;
+    padding:10px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.brand-logo{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#f4b400;
+    display:grid;
+    place-items:center;
+    font-size:27px;
+}
+.brand h2{font-size:20px}
+.brand small{color:#777}
+.menu{
+    display:flex;
+    gap:22px;
+}
+.menu a{
+    color:#123d25;
+    font-weight:bold;
+}
+.menu a:hover{color:#e29a00}
+
+/* HERO */
+.hero{
+    background:
+    linear-gradient(135deg,#103d24,#286c3d);
+    color:white;
+}
+.hero-inner{
+    max-width:1200px;
+    margin:auto;
+    min-height:510px;
+    padding:70px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+}
+.hero-text{max-width:700px}
+.badge{
+    display:inline-block;
+    background:#ffffff18;
+    border:1px solid #ffffff35;
+    padding:8px 14px;
+    border-radius:30px;
+    margin-bottom:18px;
+}
+.hero h1{
+    font-size:55px;
+    line-height:1.1;
+    margin-bottom:10px;
+}
+.hero h2{
+    font-size:27px;
+    color:#ffd45c;
+    margin-bottom:18px;
+}
+.hero p{
+    font-size:18px;
+    color:#e5eee7;
+    margin-bottom:25px;
+}
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+.btn{
+    border:0;
+    border-radius:9px;
+    padding:13px 20px;
+    cursor:pointer;
+    font-weight:bold;
+    display:inline-block;
+}
+.btn-main{
+    background:#f4b400;
+    color:#172019;
+}
+.btn-white{
+    background:white;
+    color:#123d25;
+}
+.hero-card{
+    width:310px;
+    min-width:280px;
+    background:#ffffff12;
+    border:1px solid #ffffff25;
+    padding:30px;
+    border-radius:22px;
+    text-align:center;
+}
+.big-cart{font-size:85px}
+.hero-card h3{font-size:25px;margin:10px 0}
+.hero-card p{font-size:14px;margin:0}
+
+/* GENERAL */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
+.heading{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 35px;
+}
+.heading h2{
+    color:#123d25;
+    font-size:35px;
+    margin-bottom:8px;
+}
+.heading p{color:#697269}
+
+/* FEATURES */
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+.feature{
+    background:white;
+    padding:25px 18px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 16px #0000000c;
+}
+.feature-icon{font-size:38px;margin-bottom:10px}
+.feature h3{color:#123d25;margin-bottom:6px}
+.feature p{font-size:14px;color:#687068}
+
+/* ABOUT */
+.about{
+    background:#edf4e9;
+}
+.about-grid{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:40px;
+    align-items:center;
+}
+.about h2{
+    font-size:36px;
+    color:#123d25;
+    margin-bottom:15px;
+}
+.about p{
+    color:#59635b;
+    margin-bottom:12px;
+}
+.info-box{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 6px 20px #0001;
+}
+.info-row{
+    padding:13px 0;
+    border-bottom:1px solid #eee;
+}
+.info-row:last-child{border:0}
+
+/* PRODUCTS */
+.products{
+    background:white;
+}
+.product-area{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
+.search{
+    width:100%;
+    padding:15px 18px;
+    border:2px solid #dfe6df;
+    border-radius:10px;
+    outline:0;
+    margin-bottom:18px;
+}
+.search:focus{border-color:#286c3d}
+
+/* ALL CATEGORIES IN ONE PLACE */
+.category-bar{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+.category{
+    border:1px solid #d3ddd4;
+    background:white;
+    color:#24472f;
+    padding:9px 14px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:bold;
+}
+.category.active{
+    background:#123d25;
+    color:white;
+}
+
+/* PRODUCT LIST */
+.product-list{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+.product{
+    border:1px solid #e1e7e1;
+    border-radius:13px;
+    padding:16px;
+    background:#fff;
+    transition:.2s;
+}
+.product:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 22px #00000012;
+}
+.product-top{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin-bottom:13px;
+}
+.product-icon{
+    width:48px;
+    height:48px;
+    background:#eef5eb;
+    border-radius:10px;
+    display:grid;
+    place-items:center;
+    font-size:27px;
+}
+.product h3{
+    font-size:16px;
+    color:#173c25;
+}
+.product .hindi{
+    color:#777;
+    font-size:13px;
+}
+.product .unit{
+    font-size:12px;
+    color:#59715d;
+}
+.product-bottom{
+    display:flex;
+    gap:7px;
+}
+.qty{
+    width:65px;
+    padding:9px 5px;
+    border:1px solid #ccd5cd;
+    border-radius:7px;
+    text-align:center;
+}
+.add{
+    flex:1;
+    background:#123d25;
+    color:white;
+    border:0;
+    border-radius:7px;
+    cursor:pointer;
+    font-weight:bold;
+}
+.add:hover{background:#286c3d}
+.count{
+    color:#647067;
+    margin-bottom:15px;
+    font-size:14px;
+}
+.no-result{
+    grid-column:1/-1;
+    padding:40px;
+    text-align:center;
+    background:#f5f7f5;
+    border-radius:12px;
+}
+
+/* SHOPPING LIST */
+.order{
+    background:#f0f5ed;
+}
+.order-grid{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
+.customer{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 4px 15px #0000000b;
+}
+.customer h3{
+    color:#123d25;
+    margin-bottom:17px;
+}
+.form{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+.form div:last-child{
+    grid-column:1/-1;
+}
+.form label{
+    display:block;
+    font-weight:bold;
+    font-size:13px;
+    margin-bottom:6px;
+}
+.form input,.form textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #d2dbd3;
+    border-radius:8px;
+    outline:0;
+}
+.form textarea{
+    height:85px;
+    resize:vertical;
+}
+.selected{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 4px 15px #0000000b;
+}
+.selected h3{color:#123d25}
+.table-wrap{overflow-x:auto}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+th,td{
+    padding:12px 8px;
+    border-bottom:1px solid #eee;
+    text-align:left;
+}
+th{
+    background:#f0f4ef;
+    color:#123d25;
+}
+.remove{
+    background:#ffe5e5;
+    color:#c62828;
+    border:0;
+    padding:6px 9px;
+    border-radius:6px;
+    cursor:pointer;
+}
+.order-buttons{
+    margin-top:20px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+.whatsapp{background:#25d366;color:white}
+.print{background:#123d25;color:white}
+.clear{background:#d83b3b;color:white}
+
+/* VALUES */
+.values{
+    background:#123d25;
+    color:white;
+}
+.value-grid{
+    max-width:1100px;
+    margin:auto;
+    padding:70px 20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+.value{
+    text-align:center;
+    padding:28px;
+    border:1px solid #ffffff20;
+    border-radius:15px;
+    background:#ffffff0b;
+}
+.value span{font-size:35px}
+.value h3{margin:10px 0}
+.value p{color:#d5e2d8;font-size:14px}
+
+/* CONTACT */
+.contact-grid{
+    max-width:1000px;
+    margin:auto;
+    padding:70px 20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+.contact-card{
+    background:white;
+    border-radius:15px;
+    padding:28px;
+    text-align:center;
+    box-shadow:0 5px 18px #0000000c;
+}
+.contact-card span{font-size:38px}
+.contact-card h3{
+    color:#123d25;
+    margin:8px 0;
+}
+.contact-card a{
+    color:#286c3d;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    background:#092515;
+    color:#b8c8bc;
+    text-align:center;
+    padding:30px 15px;
+}
+footer strong{color:white}
+.footer-logo{
+    font-size:35px;
+    margin-bottom:8px;
+}
+
+/* FLOAT WHATSAPP */
+.float-wa{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25d366;
+    color:white;
+    display:grid;
+    place-items:center;
+    font-size:28px;
+    z-index:99;
+    box-shadow:0 5px 20px #0004;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+    .product-list{grid-template-columns:repeat(3,1fr)}
+    .features{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:800px){
+    .menu{display:none}
+    .hero-inner{flex-direction:column;text-align:center}
+    .hero-buttons{justify-content:center}
+    .about-grid{grid-template-columns:1fr}
+    .value-grid{grid-template-columns:1fr}
+    .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+    .top{flex-direction:column;text-align:center}
+    .hero h1{font-size:38px}
+    .hero h2{font-size:22px}
+    .product-list{grid-template-columns:repeat(2,1fr)}
+    .form{grid-template-columns:1fr}
+    .form div:last-child{grid-column:auto}
+}
+@media(max-width:450px){
+    .nav-inner{padding:9px 12px}
+    .brand h2{font-size:16px}
+    .brand-logo{width:43px;height:43px}
+    .hero-inner{padding:55px 15px}
+    .hero h1{font-size:31px}
+    .hero-card{width:100%}
+    .container,.product-area,.order-grid,.about-grid,
+    .value-grid,.contact-grid{padding-left:14px;padding-right:14px}
+    .product-list{grid-template-columns:1fr}
+    .features{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP -->
+<header class="header">
+    <div class="top">
+        <span>🌾 गांव की अपनी भरोसेमंद राशन दुकान</span>
+        <span>Owner: <b>Aarif Quraishi</b> &nbsp; | &nbsp; 📞 9006693786</span>
+    </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+    <div class="nav-inner">
+
+        <div class="brand">
+            <div class="brand-logo">🛒</div>
+            <div>
+                <h2>Affan Kirana Store</h2>
+                <small>अफ्फान किराना स्टोर</small>
+            </div>
+        </div>
+
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Ration</a>
+            <a href="#order">My List</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-inner">
+
+        <div class="hero-text">
+
+            <div class="badge">🌾 Village Ration & Grocery Store</div>
+
+            <h1>Affan Kirana Store</h1>
+
+            <h2>अफ्फान किराना स्टोर</h2>
+
+            <p>
+                आपके गांव की अपनी किराना दुकान।
+                रोज़मर्रा के जरूरी राशन का सामान एक ही जगह
+                खोजें और अपनी shopping list आसानी से तैयार करें।
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-main">
+                    🛒 सामान देखें
+                </a>
+
+                <a href="#order" class="btn btn-white">
+                    📝 मेरी List
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+            <div class="big-cart">🛒</div>
+            <h3>अपना गांव • अपनी दुकान</h3>
+            <p>
+                भरोसा, सही सामान और अच्छे व्यवहार के साथ।
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+<section class="container">
+
+    <div class="heading">
+        <h2>हमारी खासियत</h2>
+        <p>Simple shopping for village families</p>
+    </div>
+
+    <div class="features">
+
+        <div class="feature">
+            <div class="feature-icon">🤝</div>
+            <h3>भरोसा</h3>
+            <p>ईमानदारी और विश्वास के साथ सेवा।</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">🌾</div>
+            <h3>Ration Items</h3>
+            <p>घर के रोजमर्रा के जरूरी grocery items।</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">📝</div>
+            <h3>Shopping List</h3>
+            <p>अपनी जरूरत के सामान की list बनाएं।</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">📲</div>
+            <h3>WhatsApp</h3>
+            <p>List सीधे WhatsApp पर भेजें।</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <div class="about-grid">
+
+        <div>
+            <h2>हमारे बारे में</h2>
+
+            <p>
+                <b>Affan Kirana Store</b> गांव के परिवारों के
+                रोजमर्रा के राशन और grocery सामान के लिए बनाया गया
+                एक simple और convenient store website है।
+            </p>
+
+            <p>
+                आप यहां सामान की पूरी list देख सकते हैं,
+                search कर सकते हैं, quantity चुन सकते हैं और
+                अपनी shopping list तैयार कर सकते हैं।
+            </p>
+
+            <p>
+                <b>हमारा उद्देश्य:</b>
+                अच्छा सामान, आसान सेवा और ग्राहकों का भरोसा।
+            </p>
+        </div>
+
+        <div class="info-box">
+
+            <div class="info-row">🏪 <b>Store:</b> Affan Kirana Store</div>
+            <div class="info-row">👤 <b>Owner:</b> Aarif Quraishi</div>
+            <div class="info-row">📞 <b>Phone:</b> 9006693786</div>
+            <div class="info-row">🌾 <b>Category:</b> Ration & Grocery</div>
+            <div class="info-row">❤️ <b>Service:</b> Customer First</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+
+    <div class="product-area">
+
+        <div class="heading">
+            <h2>🛒 राशन का सामान</h2>
+            <p>
+                सभी जरूरी राशन items एक ही जगह
+            </p>
+        </div>
+
+        <input
+            type="text"
+            id="search"
+            class="search"
+            placeholder="🔎 सामान खोजें — Rice, Atta, Dal, चावल, आटा..."
+        >
+
+        <div class="category-bar" id="categories"></div>
+
+        <div class="count" id="count"></div>
+
+        <div class="product-list" id="productList"></div>
+
+    </div>
+
+</section>
+
+<!-- SHOPPING LIST -->
+<section class="order" id="order">
+
+    <div class="order-grid">
+
+        <div class="heading">
+            <h2>📝 मेरी Shopping List</h2>
+            <p>
+                सामान select करें और अपनी पूरी list तैयार करें।
+            </p>
+        </div>
+
+        <div class="customer">
+
+            <h3>👤 Customer Details</h3>
+
+            <div class="form">
+
+                <div>
+                    <label>Name / नाम</label>
+                    <input
+                        id="name"
+                        type="text"
+                        placeholder="अपना नाम"
+                    >
+                </div>
+
+                <div>
+                    <label>Mobile / मोबाइल</label>
+                    <input
+                        id="mobile"
+                        type="tel"
+                        placeholder="Mobile Number"
+                    >
+                </div>
+
+                <div>
+                    <label>Village / गांव</label>
+                    <input
+                        id="village"
+                        type="text"
+                        placeholder="गांव का नाम"
+                    >
+                </div>
+
+                <div>
+                    <label>Address / पता</label>
+                    <textarea
+                        id="address"
+                        placeholder="पूरा पता"
+                    ></textarea>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="selected">
+
+            <h3>🛍️ Selected Ration Items</h3>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>सामान</th>
+                            <th>Hindi</th>
+                            <th>Quantity</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="selectedItems">
+
+                        <tr>
+                            <td colspan="4" style="text-align:center">
+                                अभी कोई सामान select नहीं किया गया।
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="order-buttons">
+
+                <button
+                    class="btn whatsapp"
+                    onclick="sendWhatsApp()"
+                >
+                    💬 WhatsApp List
+                </button>
+
+                <button
+                    class="btn print"
+                    onclick="printList()"
+                >
+                    🖨️ Print
+                </button>
+
+                <button
+                    class="btn clear"
+                    onclick="clearList()"
+                >
+                    🗑️ Clear
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- VALUES -->
+<section class="values">
+
+    <div class="value-grid">
+
+        <div class="value">
+            <span>🤝</span>
+            <h3>भरोसा</h3>
+            <p>
+                “Trust is the foundation of every strong relationship.”
+            </p>
+        </div>
+
+        <div class="value">
+            <span>🌾</span>
+            <h3>हमारा गांव</h3>
+            <p>
+                “Our village, our people, our responsibility.”
+            </p>
+        </div>
+
+        <div class="value">
+            <span>❤️</span>
+            <h3>ईमानदारी</h3>
+            <p>
+                “Serve with honesty, respect and a smile.”
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+            <span>👤</span>
+            <h3>Owner</h3>
+            <p>Aarif Quraishi</p>
+        </div>
+
+        <div class="contact-card">
+            <span>📞</span>
+            <h3>Call</h3>
+            <a href="tel:9006693786">9006693786</a>
+        </div>
+
+        <div class="contact-card">
+            <span>💬</span>
+            <h3>WhatsApp</h3>
+            <a
+                href="https://wa.me/919006693786"
+                target="_blank"
+            >
+                Chat Now
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-logo">🛒</div>
+
+    <p>
+        <strong>Affan Kirana Store</strong>
+        • अफ्फान किराना स्टोर
+    </p>
+
+    <p>
+        Owner: Aarif Quraishi • 9006693786
+    </p>
+
+    <br>
+
+    <p>
+        © <span id="year"></span> Affan Kirana Store.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+<a
+    class="float-wa"
+    href="https://wa.me/919006693786"
+    target="_blank"
+    title="WhatsApp"
+>💬</a>
+
+
+<script>
+
+/* =========================
+   ALL RATION ITEMS
+========================= */
+
+const products = [
+
+["Wheat","गेहूं","Atta & Grains","🌾","1 kg"],
+["Wheat Flour","गेहूं का आटा","Atta & Grains","🌾","1 kg"],
+["Bajra","बाजरा","Atta & Grains","🌾","1 kg"],
+["Jowar","ज्वार","Atta & Grains","🌾","1 kg"],
+["Ragi","रागी","Atta & Grains","🌾","1 kg"],
+["Maize","मक्का","Atta & Grains","🌽","1 kg"],
+["Maize Flour","मक्के का आटा","Atta & Grains","🌽","1 kg"],
+["Maida","मैदा","Atta & Grains","🥣","1 kg"],
+["Sooji","सूजी","Atta & Grains","🥣","1 kg"],
+["Dalia","दलिया","Atta & Grains","🥣","1 kg"],
+["Besan","बेसन","Atta & Grains","🥣","1 kg"],
+["Rice","चावल","Atta & Grains","🍚","1 kg"],
+["Basmati Rice","बासमती चावल","Atta & Grains","🍚","1 kg"],
+["Sella Rice","सेला चावल","Atta & Grains","🍚","1 kg"],
+["Broken Rice","टूटा चावल","Atta & Grains","🍚","1 kg"],
+["Poha","पोहा","Atta & Grains","🥣","500 g"],
+["Sabudana","साबूदाना","Atta & Grains","⚪","500 g"],
+["Barley","जौ","Atta & Grains","🌾","1 kg"],
+["Barley Flour","जौ का आटा","Atta & Grains","🌾","1 kg"],
+
+["Toor Dal","अरहर दाल","Pulses","🫘","1 kg"],
+["Moong Dal","मूंग दाल","Pulses","🫘","1 kg"],
+["Moong Chilka Dal","मूंग छिलका दाल","Pulses","🫘","1 kg"],
+["Masoor Dal","मसूर दाल","Pulses","🫘","1 kg"],
+["Masoor Malka Dal","मसूर मलका दाल","Pulses","🫘","1 kg"],
+["Chana Dal","चना दाल","Pulses","🫘","1 kg"],
+["Urad Dal","उड़द दाल","Pulses","🫘","1 kg"],
+["Urad Dhuli Dal","धुली उड़द दाल","Pulses","🫘","1 kg"],
+["Rajma","राजमा","Pulses","🫘","1 kg"],
+["Kabuli Chana","काबुली चना","Pulses","🫘","1 kg"],
+["Kala Chana","काला चना","Pulses","🫘","1 kg"],
+["White Peas","सफेद मटर","Pulses","🫘","1 kg"],
+["Green Peas Dry","सूखी हरी मटर","Pulses","🫘","1 kg"],
+["Lobia","लोबिया","Pulses","🫘","1 kg"],
+["Moth Dal","मोठ दाल","Pulses","🫘","1 kg"],
+["Whole Moong","साबुत मूंग","Pulses","🫘","1 kg"],
+["Whole Urad","साबुत उड़द","Pulses","🫘","1 kg"],
+["Whole Masoor","साबुत मसूर","Pulses","🫘","1 kg"],
+
+["Mustard Oil","सरसों का तेल","Oil & Ghee","🫗","1 L"],
+["Refined Oil","रिफाइंड तेल","Oil & Ghee","🫗","1 L"],
+["Sunflower Oil","सूरजमुखी तेल","Oil & Ghee","🫗","1 L"],
+["Soybean Oil","सोयाबीन तेल","Oil & Ghee","🫗","1 L"],
+["Groundnut Oil","मूंगफली तेल","Oil & Ghee","🫗","1 L"],
+["Sesame Oil","तिल का तेल","Oil & Ghee","🫗","1 L"],
+["Coconut Oil","नारियल तेल","Oil & Ghee","🥥","1 L"],
+["Vanaspati","वनस्पति","Oil & Ghee","🧈","1 kg"],
+["Desi Ghee","देसी घी","Oil & Ghee","🧈","500 g"],
+
+["Sugar","चीनी","Sugar & Salt","🍚","1 kg"],
+["Brown Sugar","ब्राउन शुगर","Sugar & Salt","🍚","1 kg"],
+["Jaggery","गुड़","Sugar & Salt","🟤","1 kg"],
+["Jaggery Powder","गुड़ पाउडर","Sugar & Salt","🟤","500 g"],
+["Rock Salt","सेंधा नमक","Sugar & Salt","🧂","1 kg"],
+["Black Salt","काला नमक","Sugar & Salt","🧂","200 g"],
+["Table Salt","सादा नमक","Sugar & Salt","🧂","1 kg"],
+
+["Turmeric Powder","हल्दी पाउडर","Spices","🟡","200 g"],
+["Red Chilli Powder","लाल मिर्च पाउडर","Spices","🌶️","200 g"],
+["Coriander Powder","धनिया पाउडर","Spices","🌿","200 g"],
+["Garam Masala","गरम मसाला","Spices","🌿","100 g"],
+["Cumin","जीरा","Spices","🌿","100 g"],
+["Coriander Seeds","धनिया साबुत","Spices","🌿","100 g"],
+["Mustard Seeds","सरसों","Spices","🌿","100 g"],
+["Fennel","सौंफ","Spices","🌿","100 g"],
+["Fenugreek","मेथी","Spices","🌿","100 g"],
+["Ajwain","अजवाइन","Spices","🌿","100 g"],
+["Black Pepper","काली मिर्च","Spices","⚫","50 g"],
+["Cloves","लौंग","Spices","🌿","50 g"],
+["Cardamom","इलायची","Spices","🌿","50 g"],
+["Cinnamon","दालचीनी","Spices","🌿","50 g"],
+["Bay Leaf","तेज पत्ता","Spices","🍃","50 g"],
+["Dry Red Chilli","सूखी लाल मिर्च","Spices","🌶️","100 g"],
+["Hing","हींग","Spices","🟤","25 g"],
+["Kasuri Methi","कसूरी मेथी","Spices","🍃","50 g"],
+["Chaat Masala","चाट मसाला","Spices","🌿","100 g"],
+["Kitchen King Masala","किचन किंग मसाला","Spices","🌿","100 g"],
+
+["Tea","चाय","Tea & Drinks","🍵","250 g"],
+["Tea Leaves","चाय पत्ती","Tea & Drinks","🍵","250 g"],
+["Coffee","कॉफी","Tea & Drinks","☕","100 g"],
+["Glucose Powder","ग्लूकोज पाउडर","Tea & Drinks","🥤","500 g"],
+["Rooh Afza","रूह अफजा","Tea & Drinks","🥤","750 ml"],
+
+["Vermicelli","सेवई","Dry Food","🍜","200 g"],
+["Macaroni","मैकरोनी","Dry Food","🍝","200 g"],
+["Pasta","पास्ता","Dry Food","🍝","500 g"],
+["Noodles","नूडल्स","Dry Food","🍜","500 g"],
+["Corn Flakes","कॉर्न फ्लेक्स","Dry Food","🥣","500 g"],
+["Oats","ओट्स","Dry Food","🥣","500 g"],
+["Papad","पापड़","Dry Food","🥠","200 g"],
+["Badi","बड़ी","Dry Food","🟤","200 g"],
+["Makhana","मखाना","Dry Food","⚪","200 g"],
+
+["Marie Biscuit","मैरी बिस्कुट","Biscuits & Snacks","🍪","Packet"],
+["Glucose Biscuit","ग्लूकोज बिस्कुट","Biscuits & Snacks","🍪","Packet"],
+["Cream Biscuit","क्रीम बिस्कुट","Biscuits & Snacks","🍪","Packet"],
+["Salt Biscuit","नमकीन बिस्कुट","Biscuits & Snacks","🍪","Packet"],
+["Jeera Biscuit","जीरा बिस्कुट","Biscuits & Snacks","🍪","Packet"],
+["Namkeen","नमकीन","Biscuits & Snacks","🥨","200 g"],
+["Bhujia","भुजिया","Biscuits & Snacks","🥨","200 g"],
+["Sev","सेव","Biscuits & Snacks","🥨","200 g"],
+["Chips","चिप्स","Biscuits & Snacks","🥔","Packet"],
+["Papdi","पापड़ी","Biscuits & Snacks","🥨","200 g"],
+
+["Peanut Butter","पीनट बटर","Breakfast","🥜","340 g"],
+["Honey","शहद","Breakfast","🍯","250 g"],
+["Jam","जैम","Breakfast","🍓","200 g"],
+["Pickle","अचार","Breakfast","🥭","500 g"],
+["Mango Pickle","आम का अचार","Breakfast","🥭","500 g"],
+["Lemon Pickle","नींबू का अचार","Breakfast","🍋","500 g"],
+
+["Almond","बादाम","Dry Fruits","🌰","250 g"],
+["Cashew","काजू","Dry Fruits","🌰","250 g"],
+["Raisin","किशमिश","Dry Fruits","🍇","250 g"],
+["Walnut","अखरोट","Dry Fruits","🌰","250 g"],
+["Peanut","मूंगफली","Dry Fruits","🥜","500 g"],
+["Pistachio","पिस्ता","Dry Fruits","🌰","250 g"],
+
+["Sattu","सत्तू","Village Grocery","🥣","1 kg"],
+["Roasted Gram","भुना चना","Village Grocery","🫘","500 g"],
+["Murmura","मुरमुरा","Village Grocery","🍚","500 g"],
+["Dry Chana","सूखा चना","Village Grocery","🫘","1 kg"],
+["Dry Peas","सूखी मटर","Village Grocery","🫘","1 kg"],
+["Soybean","सोयाबीन","Village Grocery","🫘","1 kg"],
+["Flax Seeds","अलसी","Village Grocery","🌱","250 g"],
+["Chia Seeds","चिया बीज","Village Grocery","🌱","200 g"],
+["Sesame Seeds","तिल","Village Grocery","🌱","250 g"],
+["Pumpkin Seeds","कद्दू के बीज","Village Grocery","🌱","200 g"],
+["Sunflower Seeds","सूरजमुखी के बीज","Village Grocery","🌻","200 g"]
+
+];
+
+/* =========================
+   VARIABLES
+========================= */
+
+let selectedCategory="All";
+let list=[];
+
+/* =========================
+   ELEMENTS
+========================= */
+
+const productList=document.getElementById("productList");
+const categories=document.getElementById("categories");
+const search=document.getElementById("search");
+const count=document.getElementById("count");
+const selectedItems=document.getElementById("selectedItems");
+
+/* =========================
+   CATEGORIES
+========================= */
+
+const cats=[
+    "All",
+    ...new Set(products.map(p=>p[2]))
+];
+
+cats.forEach(cat=>{
+
+    const btn=document.createElement("button");
+
+    btn.className="category";
+    if(cat==="All") btn.classList.add("active");
+
+    btn.textContent=
+        cat==="All" ? "🌾 सभी सामान" : cat;
+
+    btn.onclick=()=>{
+
+        selectedCategory=cat;
+
+        document
+        .querySelectorAll(".category")
+        .forEach(x=>x.classList.remove("active"));
+
+        btn.classList.add("active");
+
+        renderProducts();
+    };
+
+    categories.appendChild(btn);
+});
+
+/* =========================
+   RENDER PRODUCTS
+========================= */
+
+function renderProducts(){
+
+    const text=search.value.toLowerCase().trim();
+
+    const filtered=products.filter(p=>{
+
+        const categoryOK=
+            selectedCategory==="All" ||
+            p[2]===selectedCategory;
+
+        const searchOK=
+            p[0].toLowerCase().includes(text) ||
+            p[1].includes(text) ||
+            p[2].toLowerCase().includes(text);
+
+        return categoryOK && searchOK;
+    });
+
+    count.innerHTML=
+        `<b>${filtered.length}</b> सामान दिखाया जा रहा है`;
+
+    productList.innerHTML="";
+
+    if(filtered.length===0){
+
+        productList.innerHTML=`
+            <div class="no-result">
+                <h3>😕 सामान नहीं मिला</h3>
+                <p>दूसरा नाम search करके देखें।</p>
+            </div>
+        `;
+
+        return;
+    }
+
+    filtered.forEach((p,i)=>{
+
+        const div=document.createElement("div");
+
+        div.className="product";
+
+        div.innerHTML=`
+
+            <div class="product-top">
+
+                <div class="product-icon">
+                    ${p[3]}
+                </div>
+
+                <div>
+                    <h3>${p[0]}</h3>
+                    <div class="hindi">${p[1]}</div>
+                    <div class="unit">${p[4]}</div>
+                </div>
+
+            </div>
+
+            <div class="product-bottom">
+
+                <input
+                    class="qty"
+                    id="qty-${i}"
+                    type="number"
+                    min="1"
+                    value="1"
+                >
+
+                <button
+                    class="add"
+                    onclick="addItem(${products.indexOf(p)},${i})"
+                >
+                    + List में जोड़ें
+                </button>
+
+            </div>
+        `;
+
+        productList.appendChild(div);
+    });
+}
+
+/* =========================
+   ADD ITEM
+========================= */
+
+function addItem(index,i){
+
+    const p=products[index];
+
+    const input=document.getElementById("qty-"+i);
+
+    let quantity=parseInt(input.value)||1;
+
+    const existing=list.find(x=>x[0]===p[0]);
+
+    if(existing){
+        existing[5]+=quantity;
+    }else{
+        list.push([...p,quantity]);
+    }
+
+    localStorage.setItem(
+        "affanList",
+        JSON.stringify(list)
+    );
+
+    renderList();
+
+    alert(p[0]+" आपकी list में add हो गया।");
+}
+
+/* =========================
+   RENDER LIST
+========================= */
+
+function renderList(){
+
+    selectedItems.innerHTML="";
+
+    if(list.length===0){
+
+        selectedItems.innerHTML=`
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    अभी कोई सामान select नहीं किया गया।
+                </td>
+            </tr>
+        `;
+
+        return;
+    }
+
+    list.forEach((p,i)=>{
+
+        const tr=document.createElement("tr");
+
+        tr.innerHTML=`
+
+            <td>
+                <b>${p[3]} ${p[0]}</b>
+            </td>
+
+            <td>${p[1]}</td>
+
+            <td>
+                ${p[5]} × ${p[4]}
+            </td>
+
+            <td>
+                <button
+                    class="remove"
+                    onclick="removeItem(${i})"
+                >
+                    Remove
+                </button>
+            </td>
+        `;
+
+        selectedItems.appendChild(tr);
+    });
+}
+
+/* =========================
+   REMOVE
+========================= */
+
+function removeItem(index){
+
+    list.splice(index,1);
+
+    localStorage.setItem(
+        "affanList",
+        JSON.stringify(list)
+    );
+
+    renderList();
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+search.addEventListener(
+    "input",
+    renderProducts
+);
+
+/* =========================
+   CUSTOMER STORAGE
+========================= */
+
+const fields=["name","mobile","village","address"];
+
+fields.forEach(id=>{
+
+    const input=document.getElementById(id);
+
+    input.value=
+        localStorage.getItem("affan-"+id)||"";
+
+    input.addEventListener("input",()=>{
+
+        localStorage.setItem(
+            "affan-"+id,
+            input.value
+        );
+
+    });
+});
+
+/* =========================
+   WHATSAPP
+========================= */
+
+function sendWhatsApp(){
+
+    if(list.length===0){
+
+        alert("पहले सामान अपनी shopping list में जोड़ें।");
+        return;
+    }
+
+    const name=
+        document.getElementById("name").value.trim();
+
+    const mobile=
+        document.getElementById("mobile").value.trim();
+
+    const village=
+        document.getElementById("village").value.trim();
+
+    const address=
+        document.getElementById("address").value.trim();
+
+    if(!name){
+
+        alert("अपना नाम लिखें।");
+        return;
+    }
+
+    if(!mobile){
+
+        alert("अपना mobile number लिखें।");
+        return;
+    }
+
+    let msg=
+`*AFFAN KIRANA STORE*
+अफ्फान किराना स्टोर
+
+*Customer Details*
+Name: ${name}
+Mobile: ${mobile}
+Village: ${village||"Not provided"}
+Address: ${address||"Not provided"}
+
+*MY RATION LIST*
+
+`;
+
+    list.forEach((p,i)=>{
+
+        msg+=
+`${i+1}. ${p[0]} / ${p[1]} - ${p[5]} × ${p[4]}
+`;
+
+    });
+
+    msg+=`
+Thank you for choosing Affan Kirana Store!`;
+
+    const url=
+        "https://wa.me/919006693786?text="+
+        encodeURIComponent(msg);
+
+    window.open(url,"_blank");
+}
+
+/* =========================
+   PRINT
+========================= */
+
+function printList(){
+
+    if(list.length===0){
+
+        alert("पहले सामान list में जोड़ें।");
+        return;
+    }
+
+    const name=
+        document.getElementById("name").value||"Customer";
+
+    let rows="";
+
+    list.forEach(p=>{
+
+        rows+=`
+            <tr>
+                <td>${p[0]}</td>
+                <td>${p[1]}</td>
+                <td>${p[5]} × ${p[4]}</td>
+            </tr>
+        `;
+    });
+
+    const win=window.open("","_blank");
+
+    win.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <title>Affan Kirana Store</title>
+
+        <style>
+        body{
+            font-family:Arial;
+            padding:30px;
+        }
+        h1{color:#123d25}
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+        }
+        th,td{
+            border:1px solid #ccc;
+            padding:10px;
+            text-align:left;
+        }
+        th{background:#eee}
+        </style>
+
+        </head>
+
+        <body>
+
+        <h1>Affan Kirana Store</h1>
+
+        <p>अफ्फान किराना स्टोर</p>
+
+        <p><b>Customer:</b> ${name}</p>
+
+        <table>
+
+        <tr>
+            <th>Item</th>
+            <th>Hindi</th>
+            <th>Quantity</th>
+        </tr>
+
+        ${rows}
+
+        </table>
+
+        <p>
+        Thank you for shopping with Affan Kirana Store.
+        </p>
+
+        </body>
+        </html>
+    `);
+
+    win.document.close();
+    win.print();
+}
+
+/* =========================
+   CLEAR
+========================= */
+
+function clearList(){
+
+    if(list.length===0) return;
+
+    if(confirm("पूरी shopping list clear करें?")){
+
+        list=[];
+
+        localStorage.removeItem("affanList");
+
+        renderList();
+    }
+}
+
+/* =========================
+   LOAD
+========================= */
+
+const saved=
+    localStorage.getItem("affanList");
+
+if(saved){
+
+    try{
+        list=JSON.parse(saved);
+    }catch(e){
+        list=[];
+    }
+}
+
+renderProducts();
+renderList();
+
+document.getElementById("year").textContent=
+    new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
